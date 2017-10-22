@@ -35,7 +35,7 @@ export interface CloudFunctionsAPI {
                          callback: (error: any, response: Operation) => void) => object;
 
                 // cloud.google.com/functions/docs/reference/rest/v1beta2/projects.locations.functions/generateDownloadUrl
-                generateDownloadUrl: (params: {auth: AuthClient, name: string, resource: {versionId: string}},
+                generateDownloadUrl: (params: {auth: AuthClient, name: string, resource: {versionId?: string}},
                                       callback: (error: any, response: {downloadUrl: string}) => void) => object;
 
                 // cloud.google.com/functions/docs/reference/rest/v1beta2/projects.locations.functions/generateUploadUrl
