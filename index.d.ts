@@ -1,6 +1,12 @@
 // https://github.com/google/google-auth-library-nodejs
 export namespace auth {
     function getApplicationDefault(callback: (error: any, response: AuthClient) => void): void;
+
+    class JWT {
+        constructor(email: string, keyFile: string | null, key: string | null, scopes: string | string[], subject: string | null);
+        authorize(callback: (err: any, token: any) => void): void;
+    }
+
 }
 
 export function cloudfunctions(version: string): CloudFunctionsAPI;
